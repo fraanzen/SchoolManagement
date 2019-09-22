@@ -18,8 +18,13 @@ public class CourseDaoList implements CourseDao {
         courses = new ArrayList<>();
     }
 
+    //Testklar.
     @Override
-    public Course saveCourse(Course course) {
+    public Course saveCourse(Course course){
+        if (!courses.contains(course)){
+            courses.add(course);
+            return course;
+        }
         return null;
     }
 

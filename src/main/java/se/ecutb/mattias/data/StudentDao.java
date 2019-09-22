@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface StudentDao{
 
-    boolean saveStudent(Student student);
+    Student saveStudent(Student student);
 
     Student findByEmail(String email);
 
