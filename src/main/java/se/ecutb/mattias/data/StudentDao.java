@@ -1,7 +1,6 @@
 package se.ecutb.mattias.data;
 
 import se.ecutb.mattias.model.Student;
-
 import java.util.List;
 
 public interface StudentDao{

@@ -57,7 +57,7 @@ public class StudentDaoListTest {
         List<Student> actual = StudentDaoTest.findByName("Test");
         System.out.println(StudentDaoTest.findByName("Test"));
         Assert.assertEquals(expectedList, actual);
-        
+
     }
 
     @Test

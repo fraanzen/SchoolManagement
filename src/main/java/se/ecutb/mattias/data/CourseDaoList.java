@@ -1,7 +1,6 @@
 package se.ecutb.mattias.data;
 
 import se.ecutb.mattias.model.Course;
-
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;

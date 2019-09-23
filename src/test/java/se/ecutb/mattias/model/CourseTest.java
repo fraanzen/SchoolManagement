@@ -5,7 +5,6 @@ import org.junit.Before;
 import org.junit.Test;
 import se.ecutb.mattias.data.CourseDaoList;
 import se.ecutb.mattias.data.StudentDaoList;
-
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -28,23 +27,20 @@ public class CourseTest {
     @Test
     public void register_test(){
         List<Student> expectedList = new ArrayList<>();
+        expectedList.add(studentTest);
         courseTest.register(studentTest);
-        String actual = "Student{id=1, name='Test', email='test@test.com', address='Testvägen'} Was added.";
+        Assert.assertEquals(expectedList, courseTest.getStudents());
+
     }
 
     @Test
     public void unregister_test(){
-        Student studentTest1 = new Student(1, "Test1", "test@test.com", "Testvägen");
         List<Student> expectedList = new ArrayList<>();
-        courseTest.register(studentTest1);
+        expectedList.add(studentTest);
         courseTest.register(studentTest);
-
-
-
+        Assert.assertEquals(expectedList, courseTest.getStudents());
+        courseTest.unregister(studentTest);
+        expectedList.clear();
+        Assert.assertEquals(expectedList, courseTest.getStudents());
     }
-
-
-
-
-
 }

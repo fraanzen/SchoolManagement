@@ -66,14 +66,15 @@ public class Course{
         this.students = students;
     }
 
+    //Testad.
     public void register(Student student){
         if (!students.contains(student)) {
             students.add(student);
             System.out.println(student + " Was added.");
         }
-
     }
 
+    //Testad.
     public void unregister(Student student){
         if (students.contains(student)){
             students.remove(student);
