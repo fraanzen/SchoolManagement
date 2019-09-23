@@ -45,10 +45,9 @@ public class StudentDaoList implements StudentDao{
         for (Student student : students){
             if (student.getName().equalsIgnoreCase(name)){
                 tempStudent.add(student);
-                return tempStudent;
             }
         }
-        return null;
+        return tempStudent;
     }
 
     //Testad.

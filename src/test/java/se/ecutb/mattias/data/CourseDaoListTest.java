@@ -84,7 +84,7 @@ public class CourseDaoListTest {
     }
 
     @Test
-    public void find_by_date_test(){
+    public void find_by_date_test() {
         List<Course> expectedList = new ArrayList<>();
         expectedList.add(courseTest);
         CourseDaoTest.saveCourse(courseTest);

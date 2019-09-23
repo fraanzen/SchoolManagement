@@ -67,11 +67,18 @@ public class Course{
     }
 
     public void register(Student student){
+        if (!students.contains(student)) {
+            students.add(student);
+            System.out.println(student + " Was added.");
+        }
 
     }
 
     public void unregister(Student student){
-
+        if (students.contains(student)){
+            students.remove(student);
+            System.out.println(student + " Was removed.");
+        }
     }
 
     @Override

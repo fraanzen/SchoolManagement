@@ -48,13 +48,16 @@ public class StudentDaoListTest {
 
     @Test
     public void find_by_name_test() {
+        Student studentTest1 = new Student(2, "Test", "test@test.com", "Testvägen");
         List<Student> expectedList = new ArrayList<>();
         expectedList.add(studentTest);
+        expectedList.add(studentTest1);
         StudentDaoTest.saveStudent(studentTest);
+        StudentDaoTest.saveStudent(studentTest1);
         List<Student> actual = StudentDaoTest.findByName("Test");
+        System.out.println(StudentDaoTest.findByName("Test"));
         Assert.assertEquals(expectedList, actual);
-        expectedList = null;
-        actual = StudentDaoTest.findByName("Test1");
+        
     }
 
     @Test
