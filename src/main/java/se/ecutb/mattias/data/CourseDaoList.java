@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Metoder klara, testa.
+ * Allt klart.
  */
 
 public class CourseDaoList implements CourseDao {
@@ -18,7 +18,7 @@ public class CourseDaoList implements CourseDao {
         courses = new ArrayList<>();
     }
 
-    //Testklar.
+    //Testad.
     @Override
     public Course saveCourse(Course course) {
         if (!courses.contains(course)) {
@@ -28,6 +28,7 @@ public class CourseDaoList implements CourseDao {
         return null;
     }
 
+    //Testad
     @Override
     public Course findById(int id) {
         for (Course course : courses)
@@ -37,6 +38,7 @@ public class CourseDaoList implements CourseDao {
         return null;
     }
 
+    //Testad.
     @Override
     public List<Course> findByName(String name) {
         List<Course> tempCourse = new ArrayList<>();
@@ -49,6 +51,7 @@ public class CourseDaoList implements CourseDao {
         return null;
     }
 
+    //Testad.
     @Override
     public List<Course> findByDate(LocalDate date) {
         for (Course course : courses) {
@@ -59,12 +62,13 @@ public class CourseDaoList implements CourseDao {
         return null;
     }
 
-
+    //Testad.
     @Override
     public List<Course> findAll() {
         return courses;
     }
 
+    //Testad.
     @Override
     public boolean removeCourse(Course course) {
         if (courses.contains(course)) {

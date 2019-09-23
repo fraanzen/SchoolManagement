@@ -47,7 +47,7 @@ public class StudentDaoListTest {
     }
 
     @Test
-    public void find_by_name_test(){
+    public void find_by_name_test() {
         List<Student> expectedList = new ArrayList<>();
         expectedList.add(studentTest);
         StudentDaoTest.saveStudent(studentTest);

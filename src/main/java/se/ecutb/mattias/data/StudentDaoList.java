@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * FindByName metod ska testas.
+ * Allt klart.
  */
 
 public class StudentDaoList implements StudentDao{
