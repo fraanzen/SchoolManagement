@@ -2,11 +2,6 @@ package se.ecutb.mattias.model;
 
 import java.util.Objects;
 
-/**
- * Hashcode, equals och to string behövs.
- */
-
-
 public class Student{
 
     private static int idCounter;
@@ -15,11 +10,11 @@ public class Student{
     private String email;
     private String address;
 
-    public Student(int id, String name, String email, String adress) {
+    public Student(int id, String name, String email, String address) {
         this.id = id;
         this.name = name;
         this.email = email;
-        this.address = adress;
+        this.address = address;
     }
 
     public Student(String name, String email, String address){

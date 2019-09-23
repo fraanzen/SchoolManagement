@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Objects;
 
 /**
- * Hashcode, equals och to string behövs.
  * Register och unregister metoder.
  */
 
