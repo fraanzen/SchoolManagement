@@ -1,6 +1,7 @@
 package se.ecutb.mattias.model;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -18,16 +19,16 @@ public class Course{
     private int weekDuration;
     private List<Student> students;
 
-    public Course(int courseId, String courseName, LocalDate startDate, int weekDuration, List<Student> students){
+    public Course(int courseId, String courseName, LocalDate startDate, int weekDuration){
         this.courseId = courseId;
         this.courseName = courseName;
         this.startDate = startDate;
         this.weekDuration = weekDuration;
-        this.students = students;
+        this.students = new ArrayList<>();
     }
 
-    public Course(String courseName, LocalDate startDate, int weekDuration, List<Student> students){
-        this(++courseCounter, courseName, startDate, weekDuration, students);
+    public Course(String courseName, LocalDate startDate, int weekDuration){
+        this(++courseCounter, courseName, startDate, weekDuration);
     }
 
     public int getCourseId() {

@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Metoder skall tests.
+ * FindByName metod ska testas.
  */
 
 public class StudentDaoList implements StudentDao{
@@ -17,7 +17,7 @@ public class StudentDaoList implements StudentDao{
         students = new ArrayList<>();
     }
 
-    //Testklar.
+    //Testad.
     @Override
     public Student saveStudent(Student student) {
         if (!students.contains(student)){
@@ -27,7 +27,7 @@ public class StudentDaoList implements StudentDao{
         return null;
     }
 
-    //Testklar.
+    //Testad.
     @Override
     public Student findByEmail(String email) {
         for (Student student : students){
@@ -38,7 +38,7 @@ public class StudentDaoList implements StudentDao{
         return null;
     }
 
-    //Testklar. OKLAR?
+    //Testad.
     @Override
     public List<Student> findByName(String name) {
         List<Student> tempStudent = new ArrayList<>();
@@ -51,7 +51,7 @@ public class StudentDaoList implements StudentDao{
         return null;
     }
 
-    //Testklar.
+    //Testad.
     @Override
     public Student findById(int id) {
         for (Student student : students){
@@ -62,12 +62,13 @@ public class StudentDaoList implements StudentDao{
         return null;
     }
 
-    //Testklar.
+    //Testad.
     @Override
     public List<Student> findAll() {
         return students;
     }
-    //Testklar.
+
+    //Testad.
     @Override
     public boolean deleteStudent(Student student) {
         if (students.contains(student)){
