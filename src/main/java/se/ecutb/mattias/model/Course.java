@@ -2,6 +2,7 @@ package se.ecutb.mattias.model;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Hashcode, equals och to string behövs.
@@ -73,4 +74,29 @@ public class Course{
 
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Course course = (Course) o;
+        return courseId == course.courseId &&
+                Objects.equals(courseName, course.courseName) &&
+                Objects.equals(startDate, course.startDate);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(courseId, courseName, startDate);
+    }
+
+    @Override
+    public String toString() {
+        return "Course{" +
+                "courseId=" + courseId +
+                ", courseName='" + courseName + '\'' +
+                ", startDate=" + startDate +
+                ", weekDuration=" + weekDuration +
+                ", students=" + students +
+                '}';
+    }
 }

@@ -41,11 +41,11 @@ public class StudentDaoList implements StudentDao{
     //Testklar. OKLAR?
     @Override
     public List<Student> findByName(String name) {
-        List<Student> tempList = new ArrayList<>();
+        List<Student> tempStudent = new ArrayList<>();
         for (Student student : students){
             if (student.getName().equalsIgnoreCase(name)){
-                tempList.add(student);
-                return tempList;
+                tempStudent.add(student);
+                return tempStudent;
             }
         }
         return null;

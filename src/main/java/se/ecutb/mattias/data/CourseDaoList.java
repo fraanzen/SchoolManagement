@@ -39,11 +39,11 @@ public class CourseDaoList implements CourseDao {
 
     @Override
     public List<Course> findByName(String name) {
-        List<Course> tempList = new ArrayList<>();
+        List<Course> tempCourse = new ArrayList<>();
         for (Course course : courses) {
             if (course.getCourseName().equalsIgnoreCase(name)){
-                tempList.add(course);
-                return tempList;
+                tempCourse.add(course);
+                return tempCourse;
             }
         }
         return null;
