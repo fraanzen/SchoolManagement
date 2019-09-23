@@ -7,21 +7,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Metoder skall göras.
+ * Metoder klara, testa.
  */
 
 public class CourseDaoList implements CourseDao {
 
-    private static List<Course>courses;
+    private static List<Course> courses;
 
-    public CourseDaoList(){
+    public CourseDaoList() {
         courses = new ArrayList<>();
     }
 
     //Testklar.
     @Override
-    public Course saveCourse(Course course){
-        if (!courses.contains(course)){
+    public Course saveCourse(Course course) {
+        if (!courses.contains(course)) {
             courses.add(course);
             return course;
         }
@@ -30,26 +30,49 @@ public class CourseDaoList implements CourseDao {
 
     @Override
     public Course findById(int id) {
+        for (Course course : courses)
+            if (course.getCourseId() == id) {
+                return course;
+            }
         return null;
     }
 
     @Override
     public List<Course> findByName(String name) {
+        List<Course> tempList = new ArrayList<>();
+        for (Course course : courses) {
+            if (course.getCourseName().equalsIgnoreCase(name)){
+                tempList.add(course);
+                return tempList;
+            }
+        }
         return null;
     }
 
     @Override
     public List<Course> findByDate(LocalDate date) {
+        for (Course course : courses) {
+            if (course.getStartDate().equals(date)) {
+                return courses;
+            }
+        }
         return null;
     }
 
+
     @Override
     public List<Course> findAll() {
-        return null;
+        return courses;
     }
 
     @Override
     public boolean removeCourse(Course course) {
+        if (courses.contains(course)) {
+            courses.remove(course);
+            return true;
+        }
         return false;
     }
 }
+
+

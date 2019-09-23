@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Metoder skall göras.
+ * Metoder skall tests.
  */
 
 public class StudentDaoList implements StudentDao{
@@ -41,9 +41,11 @@ public class StudentDaoList implements StudentDao{
     //Testklar. OKLAR?
     @Override
     public List<Student> findByName(String name) {
+        List<Student> tempList = new ArrayList<>();
         for (Student student : students){
-            if (student.getName().equals(name)){
-                return (List<Student>) student;
+            if (student.getName().equalsIgnoreCase(name)){
+                tempList.add(student);
+                return tempList;
             }
         }
         return null;
