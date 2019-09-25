@@ -1,5 +1,4 @@
 package se.ecutb.mattias.model;
-
 import java.util.Objects;
 
 public class Student{
