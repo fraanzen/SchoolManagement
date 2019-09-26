@@ -1,13 +1,8 @@
 package se.ecutb.mattias.model;
-
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-
-/**
- * Register och unregister metoder.
- */
 
 public class Course{
 
@@ -30,9 +25,6 @@ public class Course{
         this(++courseCounter, courseName, startDate, weekDuration);
     }
 
-
-
-
     public int getCourseId() {
         return courseId;
     }
@@ -41,32 +33,12 @@ public class Course{
         return courseName;
     }
 
-    public void setCourseName(String courseName) {
-        this.courseName = courseName;
-    }
-
     public LocalDate getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(LocalDate startDate) {
-        this.startDate = startDate;
-    }
-
-    public int getWeekDuration() {
-        return weekDuration;
-    }
-
-    public void setWeekDuration(int weekDuration) {
-        this.weekDuration = weekDuration;
-    }
-
-    public List<Student> getStudents() {
+    List<Student> getStudents() {
         return students;
-    }
-
-    public void setStudents(List<Student> students) {
-        this.students = students;
     }
 
     //Testad.
