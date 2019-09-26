@@ -30,6 +30,9 @@ public class Course{
         this(++courseCounter, courseName, startDate, weekDuration);
     }
 
+
+
+
     public int getCourseId() {
         return courseId;
     }
