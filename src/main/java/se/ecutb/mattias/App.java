@@ -18,7 +18,7 @@ public class App{
         boolean exit = true;
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Welcome to School Management.");
+        System.out.println("Welcome to School Managem@ent.");
         while (exit){
             System.out.println("Press 1 to create new Course or Student. " +
                     "Press 2 to register and remove Student to/from Courses. "+
@@ -61,7 +61,11 @@ public class App{
                 System.out.println("Do you want to register or remove Students to/from a Course? Press 1 to register and 2 to remove.");
                 String choice =  sc.nextLine();
                 if (choice.equalsIgnoreCase("1")){
-                    //register
+                    System.out.println("Enter the id of the student you want to register.");
+                    Student temp = StudentList.findById(sc.nextInt());
+                    System.out.println("Enter the id of the course.");
+                    CourseList.findById(sc.nextInt()).register(temp);
+
                 } else if (choice.equalsIgnoreCase("2")){
                     //unregister
                 }
