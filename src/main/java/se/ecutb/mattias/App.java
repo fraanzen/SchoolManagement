@@ -6,6 +6,7 @@ import se.ecutb.mattias.data.StudentDaoList;
 import java.time.LocalDate;
 import java.util.Scanner;
 
+
 public class App 
 {
     public static StudentDaoList StudentList = new StudentDaoList();

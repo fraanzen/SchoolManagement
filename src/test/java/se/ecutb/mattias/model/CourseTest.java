@@ -36,11 +36,8 @@ public class CourseTest {
     @Test
     public void unregister_test(){
         List<Student> expectedList = new ArrayList<>();
-        expectedList.add(studentTest);
         courseTest.register(studentTest);
-        Assert.assertEquals(expectedList, courseTest.getStudents());
         courseTest.unregister(studentTest);
-        expectedList.clear();
         Assert.assertEquals(expectedList, courseTest.getStudents());
     }
 }
