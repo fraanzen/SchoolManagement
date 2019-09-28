@@ -76,6 +76,14 @@ public class CourseDaoList implements CourseDao {
         }
         return false;
     }
+
+    //Testad.
+    @Override
+    public int getListLength(){
+        Object arr[] =  courses.toArray();
+        int length = arr.length;
+        return length;
+    }
 }
 
 

@@ -5,10 +5,13 @@ import org.junit.Before;
 import org.junit.Test;
 import se.ecutb.mattias.model.Course;
 import se.ecutb.mattias.model.Student;
-
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+
+/**
+ * Tested with 100% Coverage.
+ */
 
 public class CourseDaoListTest {
 
@@ -95,4 +98,12 @@ public class CourseDaoListTest {
         actual = CourseDaoTest.findByDate(LocalDate.parse("2020-10-10"));
     }
 
+    @Test
+    public void get_array_length_test(){
+        List<Course> expectedList = new ArrayList<>();
+        expectedList.add(courseTest);
+        CourseDaoTest.saveCourse(courseTest);
+        int expectedLength = 1;
+        Assert.assertEquals(expectedLength, CourseDaoTest.getListLength());
+    }
 }

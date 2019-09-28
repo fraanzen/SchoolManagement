@@ -41,6 +41,18 @@ public class Course{
         return students;
     }
 
+    public void setCourseName(String courseName) {
+        this.courseName = courseName;
+    }
+
+    public void setStartDate(LocalDate startDate) {
+        this.startDate = startDate;
+    }
+
+    public void setWeekDuration(int weekDuration) {
+        this.weekDuration = weekDuration;
+    }
+
     //Testad.
     public void register(Student student){
         if (!students.contains(student)) {

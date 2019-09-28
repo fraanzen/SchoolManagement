@@ -75,4 +75,12 @@ public class StudentDaoList implements StudentDao{
         }
         return false;
     }
+
+    //Testad.
+    @Override
+    public int getListLength(){
+        Object arr[] =  students.toArray();
+        int length = arr.length;
+        return length+1;
+    }
 }

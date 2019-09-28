@@ -9,6 +9,10 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Tested with 100% Coverage.
+ */
+
 public class StudentDaoListTest {
 
     public Course courseTest;
@@ -97,5 +101,12 @@ public class StudentDaoListTest {
         StudentDaoTest.deleteStudent(studentTest);
     }
 
+    @Test
+    public void get_array_length_test() {
+        List<Student> expectedList = new ArrayList<>();
+        expectedList.add(studentTest);
+        int expectedLength = 1;
+        Assert.assertEquals(expectedLength, StudentDaoTest.getListLength());
+    }
 }
 

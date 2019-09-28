@@ -17,9 +17,6 @@ public interface StudentDao{
 
     boolean deleteStudent(Student student);
 
-
-
-
-
+    int getListLength();
 
 }

@@ -18,5 +18,7 @@ public interface CourseDao{
 
     boolean removeCourse(Course course);
 
+    int getListLength();
+
 
 }
